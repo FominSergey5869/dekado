@@ -1,0 +1,191 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+      url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+$orange: #ee7601;
+$black: #000000;
+$darkGrey: #323232;
+$grey: #b0b0b0;
+
+@import 'fonts';
+@import 'slick';
+@import 'nice-select.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 20px;
+
+  font-family: 'Helvetica Neue Cyr';
+  font-style: normal;
+  font-weight: 300;
+
+  font-size: 16px;
+  color: #323232;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// article > * + * {
+//   margin-top: 1em;
+// }
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// @media (prefers-reduced-motion: reduce) {
+//   * {
+//     animation-duration: 0.01ms !important;
+//     animation-iteration-count: 1 !important;
+//     transition-duration: 0.01ms !important;
+//     scroll-behavior: auto !important;
+//   }
+// }
+
+//Переопределяем nice-select
+.nice-select {
+  font-family: 'Helvetica Neue Cyr';
+  font-style: normal;
+  font-weight: 300;
+  border: none;
+  background-color: #f5f6f8;
+}
+.nice-select .option {
+  font-family: 'Helvetica Neue Cyr';
+  font-style: normal;
+  font-weight: 300;
+}
+.nice-select:after {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.nice-select .option.focus,
+.nice-select .option.selected.focus,
+.nice-select .option:hover {
+  font-weight: 300;
+  background-color: $orange;
+}
+
+.nice-select .option:hover {
+  color: white;
+}
+
+.nice-select .option.selected {
+  color: white;
+}
+.nice-select .list:hover .option:not(:hover) {
+  color: #000;
+}
+
+.nice-select.open .list {
+  border: none;
+  box-shadow: none;
+  background-color: #f5f6f8;
+}
+
+.wrapper {
+  max-width: 1920px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.text-container {
+  margin: 20px auto;
+  max-width: 1140px;
+  padding: 0 15px;
+  & > p {
+    padding: 15px 0;
+
+    &:first-child {
+      padding: 0 0 15px 0;
+    }
+  }
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+p {
+  transition: color 0.2s ease;
+}
+
+svg {
+  transition: fill 0.2s ease;
+}
+
+h1 {
+  padding: 0 15px;
+  font-size: 44px;
+  font-weight: lighter;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin: 0 0 44px 0;
+}
+
+h2 {
+  padding: 0 15px;
+  font-size: 30px;
+  font-weight: lighter;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin: 0 0 44px 0;
+}
+
+@import 'header';
+@import 'main';
