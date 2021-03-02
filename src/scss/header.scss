@@ -175,3 +175,41 @@
     }
   }
 }
+
+.breadcrumbs {
+  background: #f5f6f8;
+  &__container {
+    padding: 10px 15px;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    &__ul {
+      display: flex;
+      &__li {
+        display: flex;
+        & > a {
+          text-decoration: none;
+          color: $darkGrey;
+          font-size: 14px;
+          white-space: nowrap;
+          &:hover {
+            color: $orange;
+          }
+        }
+        &:last-child {
+          padding: 0 15px 0 0;
+        }
+        &::after {
+          content: '/';
+          margin: 0 15px;
+        }
+        &:last-child::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
