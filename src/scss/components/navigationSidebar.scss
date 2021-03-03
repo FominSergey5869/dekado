@@ -1,0 +1,43 @@
+.navigation-sidebar {
+  width: 262px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #d3d5d8;
+  @media (max-width: 768px) {
+    flex-direction: row;
+    width: calc(100% + 30px);
+    margin: 0 0 0 -15px;
+    padding: 0 0 15px 15px;
+    overflow-x: auto;
+    border-left: none;
+  }
+  & > a {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 10px 0 20px;
+    text-decoration: none;
+    color: $orange;
+    @media (max-width: 768px) {
+      position: relative;
+      height: auto;
+      min-height: 40px;
+      justify-content: center;
+      padding: 0 20px 0 20px;
+      white-space: nowrap;
+      border-bottom: 1px solid #d3d5d8;
+
+      &:last-child::after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        right: -15px;
+      }
+    }
+    &:hover {
+      background-color: #000;
+    }
+  }
+}

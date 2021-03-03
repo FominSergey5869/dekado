@@ -1,0 +1,16 @@
+@import 'components/bannerBlock.scss';
+
+.text-container {
+  margin: 20px auto;
+  max-width: 1140px;
+  padding: 0 15px;
+  box-sizing: content-box;
+  & > p {
+    color: $black;
+    padding: 15px 0;
+
+    &:first-child {
+      padding: 0 0 15px 0;
+    }
+  }
+}

@@ -15,8 +15,8 @@ $darkGrey: #323232;
 $grey: #b0b0b0;
 
 @import 'fonts';
-@import 'slick';
-@import 'nice-select.scss';
+@import 'libs/slick.scss';
+@import 'libs/nice-select.scss';
 
 *,
 *::before,
@@ -141,6 +141,11 @@ select {
     padding: 0 0 15px 0;
     max-width: 100%;
     overflow-x: auto;
+    @media (max-width: 460px) {
+      width: calc(100% + 30px);
+      max-width: calc(100% + 30px);
+      margin: 0 0 0 -15px;
+    }
     &__item {
       font-size: 24px;
       display: block;
@@ -148,7 +153,12 @@ select {
       text-decoration: none;
       color: #000;
       white-space: nowrap;
-
+      @media (max-width: 460px) {
+        font-size: 20px;
+        &:first-child {
+          margin: 0 0 0 15px;
+        }
+      }
       &:hover {
         color: $orange;
       }
@@ -175,21 +185,6 @@ select {
   margin: auto;
 }
 
-.text-container {
-  margin: 20px auto;
-  max-width: 1140px;
-  padding: 0 15px;
-  box-sizing: content-box;
-  & > p {
-    color: $black;
-    padding: 15px 0;
-
-    &:first-child {
-      padding: 0 0 15px 0;
-    }
-  }
-}
-
 .page-container {
   margin: 0 auto 80px auto;
   max-width: 1140px;
@@ -197,12 +192,53 @@ select {
   box-sizing: content-box;
 }
 
+//контейнеры карт
+.map-container {
+  height: 600px;
+  @media (max-width: 768px) {
+    height: 400px;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  padding: 25px 0 56.25% 0;
+  height: 0;
+
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//ширина всех элементов select
+.select-container {
+  width: 256px;
+}
+
 a {
   transition: color 0.2s ease;
+
+  &.arrow-after:hover {
+    position: relative;
+    &::after {
+      content: '\2192';
+      position: absolute;
+      right: 0;
+      transform: translateX(150%);
+    }
+  }
 }
 
 p {
   transition: color 0.2s ease;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 svg {
@@ -213,24 +249,65 @@ h1 {
   padding: 0 15px;
   font-size: 44px;
   font-weight: lighter;
-  line-height: 50px;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
   color: #000000;
   margin: 80px 0 44px 0;
+
+  &.article-title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 h2 {
   padding: 0 15px;
   font-size: 30px;
   font-weight: lighter;
-  line-height: 36px;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
   color: #000000;
   margin: 0 0 44px 0;
 }
 
-@import 'header';
+h3 {
+  font-size: 24px;
+  font-weight: lighter;
+  line-height: 1.2;
+  text-align: left;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin: 0 0 40px 0;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: lighter;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin: 0 0 20px 0;
+}
+
+@import 'components/header.scss';
+@import 'components/footer.scss';
+@import 'components/pagination';
+
 @import 'main';
-@import 'products';
+@import 'about';
+@import 'contacts';
+@import 'catalog';
+@import 'catalogSecondLevel';
+@import 'product';
+@import 'news';
+@import 'newsPage';
+@import 'helpfullInformation';
+@import 'videos';
+@import 'whereBuy';

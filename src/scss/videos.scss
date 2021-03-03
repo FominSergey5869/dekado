@@ -1,0 +1,13 @@
+@import 'components/widthSidebarContainer.scss';
+@import 'components/navigationSidebar.scss';
+
+.video-item {
+  margin: 0 0 50px 0;
+  &__link {
+    display: inline-block;
+    font-size: 22px;
+    margin: 0 0 21px 0;
+    text-decoration: none;
+    color: $orange;
+  }
+}

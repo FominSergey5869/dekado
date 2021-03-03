@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    @@include('_header.html')
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container">
+        <ul class="breadcrumbs__container__ul">
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Новости </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="page-container">
+        <h1>Новости компании DEKADO</h1>
+        <div class="news">
+          <div class="news__item">
+            <a href="#" class="news__item__img">
+              <img src="img/main/new1.jpg" />
+            </a>
+            <div class="news__item__text">
+              <span class="news__item__text__date">09.07.2019</span>
+              <a href="#" class="news__item__text__title arrow-after">
+                Сварочные аппараты инверторного типа нового поколения
+              </a>
+              <p class="news__item__text__desc">
+                Новейшая технология подачи сварочного тока IGBT
+              </p>
+            </div>
+          </div>
+          <div class="news__item">
+            <a href="#" class="news__item__img">
+              <img src="img/main/new2.png" />
+            </a>
+            <div class="news__item__text">
+              <span class="news__item__text__date">09.07.2019</span>
+              <a href="#" class="news__item__text__title arrow-after">
+                Бензопила DEKADO БП 355 Новинка сезона!
+              </a>
+              <p class="news__item__text__desc">
+                Бензопилы DEKADO успешно прошли практические тесты, выполняя
+                различные про- фессиональные лесозаготовительные операции-
+                валка, раскряжовка, обрезка сучьев, рас- чистка территорий,
+                уборка пней на лесосеках. Портативность бензопил - весомое
+                преиму- щество, бензопила DEKADO выручит, даже если Вы
+                собираетесь на рыбалку.
+              </p>
+            </div>
+          </div>
+          <div class="news__item">
+            <a href="#" class="news__item__img">
+              <img src="img/main/new3.jpg" />
+            </a>
+            <div class="news__item__text">
+              <span class="news__item__text__date">09.07.2019</span>
+              <a href="#" class="news__item__text__title arrow-after">
+                Сварочные аппараты инверторного типа нового поколения
+              </a>
+              <p class="news__item__text__desc">
+                Новейшая технология подачи сварочного тока IGBT
+              </p>
+            </div>
+          </div>
+          <div class="pagination">
+            <span>Новости 1 - 20 из 21</span>
+            <div class="pagination__container">
+              <div class="pagination__container__item current">1</div>
+              <div class="pagination__container__item">2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('_footer.html')
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

@@ -1,7 +1,9 @@
 $(document).ready(function () {
   //слайдер на главной
-  $('.main-slider-container').slick({
+  $('.main-slider').slick({
     arrows: false,
+    dots: true,
+    dotsClass: 'custom-dots',
   })
 
   //слайдер в карточке продукта
@@ -32,7 +34,7 @@ $(document).ready(function () {
   })
 
   //кнопка навигации на карте
-  $('.main-map__navigation__right__buttons button').click(function () {
+  $('.map-navigation__right__buttons button').click(function () {
     $(this).parent().find('button').removeClass('active')
     $(this).addClass('active')
   })

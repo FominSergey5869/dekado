@@ -1,0 +1,86 @@
+.compare-button {
+  position: relative;
+  font-size: 10px;
+  font-weight: bold;
+  height: 20px;
+  padding: 0 10px;
+  margin: 10px 0;
+  border: none;
+  background-color: $orange;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+
+  &.large {
+    font-size: 16px;
+    padding: 6px 20px;
+    border-radius: 16px;
+    height: 32px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &__add {
+    white-space: nowrap;
+    text-transform: uppercase;
+    display: block;
+  }
+  &__del {
+    white-space: nowrap;
+    text-transform: uppercase;
+    display: none;
+  }
+
+  &.active > &__add {
+    display: none;
+  }
+  &.active > &__del {
+    display: block;
+  }
+
+  &.large > &__popup {
+    padding: 10px 0 0 0;
+    top: 32px;
+    &::before {
+      top: 5px;
+      left: 35px;
+    }
+  }
+  &__popup {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 19px;
+    left: 0;
+    padding: 8px 0 0 0;
+    transition: opacity 0.4s ease;
+
+    &::before {
+      content: '';
+      width: 9px;
+      height: 6px;
+      background-image: url('/img/icons/hint-arrow.svg');
+      position: absolute;
+      top: 3px;
+      left: 20px;
+    }
+
+    & > a {
+      display: block;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 6px 8px;
+      line-height: 1.2;
+      background-color: #000;
+    }
+  }
+
+  &.active:hover > &__popup {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
