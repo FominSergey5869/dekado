@@ -1,0 +1,33 @@
+.custom-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 0 0 45px;
+  cursor: pointer;
+
+  & > input {
+    display: none;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+  }
+
+  &:hover > input ~ &__checkmark {
+    background-color: #ebebeb;
+  }
+
+  & > input:checked ~ &__checkmark {
+    background-image: url('/img/icons/check.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}

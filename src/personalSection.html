@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    @@include('_header.html')
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container">
+        <ul class="breadcrumbs__container__ul">
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Дилерам </a>
+          </li>
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Персональный раздел </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="page-container">
+        <h1>Персональный раздел</h1>
+        <form class="personal-form">
+          <div class="personal-form__block">
+            <h4>Регистрационная информация</h4>
+
+            <div class="personal-form__block__form">
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <p>Дата обновления: 17.09.2019 09:43:25</p>
+                  <br />
+                  <p>Последняя авторизация: 24.09.2019 10:11:50</p>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Обращение</span>
+                    <input type="text" name="addressingname" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Имя</span>
+                    <input type="text" name="name" />
+                  </div>
+                </div>
+              </div>
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Фамилия</span>
+                    <input type="text" name="lastname" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Отчество</span>
+                    <input type="text" name="secondname" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">E-mail</span>
+                    <input type="email" name="secondname" />
+                  </div>
+                </div>
+              </div>
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Логин</span>
+                    <input type="text" name="login" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Новый пароль</span>
+                    <input type="password" name="password" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">
+                      Подтверждение пароля
+                    </span>
+                    <input type="password" name="password2" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="personal-form__block">
+            <h4>Личные данные</h4>
+
+            <div class="personal-form__block__form">
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Профессия</span>
+                    <input type="text" name="profession" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">WWW-страница</span>
+                    <input type="text" name="website" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">ICQ</span>
+                    <input type="text" name="icq" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-select">
+                    <span class="custom-select__label">Пол</span>
+                    <select class="wide" name="sex">
+                      <option value="male">Мужской</option>
+                      <option value="female">Женский</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Дата рождения</span>
+                    <input type="date" name="birthday" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input">
+                    <span class="custom-input__label">Фотография</span>
+                    <input type="file" name="photofile" id="photo-file" />
+                    <label for="photo-file">Выберите файл</label>
+                    <span class="file-chosen">Файл не выбран</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Телефон</span>
+                    <input type="text" name="phone" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Факс</span>
+                    <input type="text" name="fax" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Мобильный</span>
+                    <input type="text" name="mobilephone" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Пейджер</span>
+                    <input type="text" name="pager" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Почтовый адресс</span>
+                    <input type="text" name="mailaddress" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-select">
+                    <span class="custom-select__label">Пол</span>
+                    <select class="wide">
+                      <option data-display="Выберите страну">Не выбрано</option>
+                      <option value="1">Россия</option>
+                      <option value="2">Украина</option>
+                      <option value="3">Беларусь</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Область/край</span>
+                    <input type="text" name="region" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Город</span>
+                    <input type="text" name="city" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Индекс</span>
+                    <input type="text" name="index" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Улица</span>
+                    <input type="text" name="street" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Почтовый ящик</span>
+                    <input type="text" name="mailbox" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-textarea">
+                    <span class="custom-textarea__label">Заметки</span>
+                    <textarea name="notes"> </textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="personal-form__block">
+            <h4>Профиль форума</h4>
+
+            <div class="personal-form__block__form">
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <label class="custom-checkbox">
+                    <input name="showme" type="checkbox" checked="checked" />
+                    <span class="custom-checkbox__checkmark"></span>
+                    Показывать имя
+                  </label>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label">Пояснение</span>
+                    <input type="text" name="poyasnenie" />
+                  </div>
+                </div>
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input">
+                    <span class="custom-input__label">Аватар</span>
+                    <input type="file" name="avatarfile" id="ava-file" />
+                    <label for="ava-file">Выберите файл</label>
+                    <span class="file-chosen">Файл не выбран</span>
+                  </div>
+                </div>
+              </div>
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-textarea">
+                    <span class="custom-textarea__label">Интересы</span>
+                    <textarea name="interests"> </textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-textarea">
+                    <span class="custom-textarea__label">Подпись</span>
+                    <textarea name="podois"> </textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="personal-form__block">
+            <h4>Заметки администратора</h4>
+            <div class="personal-form__block__form">
+              <div class="personal-form__block__form__col">
+                <div class="personal-form__block__form__col__field">
+                  <div class="custom-input wide">
+                    <span class="custom-input__label"
+                      >Заметки администратора</span
+                    >
+                    <input type="text" name="adminnotes" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="personal-form__buttons">
+            <button class="custom-button" type="submit">Сохранить</button>
+            <button class="custom-button second" type="submit">Сбросить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    @@include('_footer.html')
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

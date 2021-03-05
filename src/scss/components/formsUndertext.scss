@@ -1,0 +1,29 @@
+.form-undertext {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 749px;
+
+  &__item {
+    text-align: center;
+    margin: 0 0 30px 0;
+
+    & > a {
+      color: $orange;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  }
+}
+
+.form-uppertext {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 749px;
+
+  & > p {
+    margin: 0 0 30px 0;
+  }
+}

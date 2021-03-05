@@ -1,0 +1,17 @@
+@import 'components/downloadFile.scss';
+
+.download-files {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  & > div {
+    width: 48%;
+  }
+
+  @media (max-width: 768px) {
+    & > div {
+      width: 100%;
+    }
+  }
+}

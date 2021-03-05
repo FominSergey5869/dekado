@@ -57,6 +57,10 @@ body {
 
   font-size: 16px;
   color: #323232;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 ul[class],
@@ -92,47 +96,6 @@ select {
 //     scroll-behavior: auto !important;
 //   }
 // }
-
-//Переопределяем nice-select
-.nice-select {
-  font-family: 'Helvetica Neue Cyr';
-  font-style: normal;
-  font-weight: 300;
-  border: none;
-  background-color: #f5f6f8;
-}
-.nice-select .option {
-  font-family: 'Helvetica Neue Cyr';
-  font-style: normal;
-  font-weight: 300;
-}
-.nice-select:after {
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
-}
-.nice-select .option.focus,
-.nice-select .option.selected.focus,
-.nice-select .option:hover {
-  font-weight: 300;
-  background-color: $orange;
-}
-
-.nice-select .option:hover {
-  color: white;
-}
-
-.nice-select .option.selected {
-  color: white;
-}
-.nice-select .list:hover .option:not(:hover) {
-  color: #000;
-}
-
-.nice-select.open .list {
-  border: none;
-  box-shadow: none;
-  background-color: #f5f6f8;
-}
 
 //табы
 .tabs {
@@ -181,12 +144,16 @@ select {
 
 .wrapper {
   max-width: 1920px;
-  min-height: 100vh;
+  min-height: calc(100vh - 590px);
   margin: auto;
+
+  @media (max-width: 1000px) {
+    min-height: calc(100vh - 400px);
+  }
 }
 
 .page-container {
-  margin: 0 auto 80px auto;
+  margin: 80px auto 80px auto;
   max-width: 1140px;
   padding: 0 15px;
   box-sizing: content-box;
@@ -311,3 +278,9 @@ h4 {
 @import 'helpfullInformation';
 @import 'videos';
 @import 'whereBuy';
+@import 'auth';
+@import 'passwordRecovery';
+@import 'passwordRecovery2';
+@import 'downloadFiles';
+@import 'dillerNews';
+@import 'personalSection';

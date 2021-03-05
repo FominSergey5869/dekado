@@ -41,6 +41,12 @@ $(document).ready(function () {
     console.log($(this).val())
   })
 
+  //Выбор файла
+  $('input[type="file"]').on('change', function () {
+    console.log($(this).siblings('.file-chosen'))
+    $(this).siblings('.file-chosen').text(this.files[0].name)
+  })
+
   //кнопка навигации на карте
   $('.map-navigation__right__buttons button').click(function () {
     $(this).parent().find('button').removeClass('active')

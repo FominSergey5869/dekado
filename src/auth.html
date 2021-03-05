@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    @@include('_header.html')
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container">
+        <ul class="breadcrumbs__container__ul">
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Вход для дилеров </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="page-container">
+        <h1>Вход для дилеров</h1>
+        <form class="auth-form">
+          <div class="custom-input">
+            <span class="custom-input__label">Логин</span>
+            <input type="text" name="login" />
+          </div>
+          <div class="custom-input">
+            <span class="custom-input__label">Пароль</span>
+            <input type="password" name="login" />
+          </div>
+          <button class="custom-button" type="submit">Войти</button>
+          <div class="auth-form__remember-me">
+            <label class="custom-checkbox">
+              <input name="rememberme" type="checkbox" checked="checked" />
+              <span class="custom-checkbox__checkmark"></span>
+              Запомнить меня
+            </label>
+          </div>
+        </form>
+        <div class="form-undertext">
+          <div class="form-undertext__item">
+            <a href="#" class="arrow-after">Забыли свой пароль?</a>
+          </div>
+
+          <div class="form-undertext__item">
+            Следуйте на форму для запроса пароля
+            <a href="#" class="arrow-after">форму для запроса пароля</a>
+          </div>
+
+          <div class="form-undertext__item">
+            После получения контрольной строки следуйте на форму для смены
+            пароля <a href="#" class="arrow-after"> форму для смены пароля </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('_footer.html')
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

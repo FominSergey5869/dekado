@@ -1,0 +1,64 @@
+.custom-input {
+  &__label {
+    display: block;
+    color: #b0b0b0;
+    font-size: 12px;
+  }
+
+  & > input {
+    width: 263px;
+    padding: 0 15px;
+    height: 40px;
+    background: #f5f6f8;
+    border-radius: 5px;
+    border: none;
+  }
+
+  & > input[type='date'] {
+    padding: 0 8px 0 15px;
+  }
+
+  & > input[type='file'] {
+    display: none;
+
+    & + label {
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      padding: 0 15px;
+      height: 40px;
+      font-size: 14px;
+      line-height: 1.2;
+      color: #000000;
+      border: 1px solid #c4c4c4;
+      border-radius: 5px;
+      font-weight: 400;
+      max-width: 105px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $orange;
+        border: 1px solid $orange;
+        color: white;
+      }
+    }
+  }
+  & > .file-chosen {
+    padding: 0 0 0 12px;
+    color: #b0b0b0;
+    font-size: 12px;
+    vertical-align: sub;
+  }
+
+  &.wide > input {
+    width: 100%;
+  }
+
+  &.large > input {
+    width: 360px;
+
+    @media (max-width: 400px) {
+      width: 263px;
+    }
+  }
+}
