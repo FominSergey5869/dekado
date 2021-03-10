@@ -66,4 +66,48 @@ $(document).ready(function () {
       }
     }
   })
+
+  //Numeric up down
+
+  $('.numeric-up-down__input').on('input', function () {
+    $(this).val(
+      $(this)
+        .val()
+        .replace(/[^0-9\.]/g, '')
+    )
+  })
+
+  $('.numeric-up-down__input').change(function (e) {
+    const max = $(this).data('max-value')
+    const val = Number($(this).val()).toString().trim()
+
+    if (max <= val) $(this).val(max)
+    else if (max > val) $(this).val(Number(val).toString())
+    else if (val === NaN) $(this).val(0)
+  })
+
+  $('.numeric-up-down .button--plus').click(function () {
+    const input = $(this).siblings('.numeric-up-down__input').eq(0)
+    const max = input.data('max-value')
+    let val = input.val()
+
+    if (val === '') value = 0
+
+    if (max <= val) $(this).val(max)
+    else input.val(parseInt(val) + 1)
+  })
+
+  $('.numeric-up-down .button--minus').click(function () {
+    const input = $(this).siblings('.numeric-up-down__input').eq(0)
+    let val = input.val()
+
+    if (val === '') value = 0
+
+    if (val <= 0) $(this).val(0)
+    else input.val(parseInt(val) - 1)
+  })
+
+  $('.basket-table__row .del--button').click(function () {
+    $(this).closest('.basket-table__row').remove()
+  })
 })
