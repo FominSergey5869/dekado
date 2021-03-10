@@ -1,0 +1,17 @@
+.custom-avaibility {
+  width: 39px;
+  height: 11px;
+
+  &.none {
+    background-image: url('/img/icons/avaibility-none.svg');
+  }
+  &.some {
+    background-image: url('/img/icons/avaibility-some.svg');
+  }
+  &.average {
+    background-image: url('/img/icons/avaibility-average.svg');
+  }
+  &.many {
+    background-image: url('/img/icons/avaibility-many.svg');
+  }
+}

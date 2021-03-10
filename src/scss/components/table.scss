@@ -1,4 +1,4 @@
-.basket-table {
+.custom-table {
   width: 100%;
   &__row {
     display: flex;
@@ -85,6 +85,26 @@
         justify-content: center;
         flex: 0 0 120px;
       }
+      &.col-articul {
+        padding: 0 15px 0 7px;
+        display: flex;
+        align-items: center;
+        flex: 0 0 140px;
+      }
+      &.col-avaibility {
+        padding: 0 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 70px;
+      }
+      &.col-buy {
+        padding: 0 15px 0 7px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 0 0 130px;
+      }
       & > span {
         font-size: 12px;
         color: #878787;
@@ -95,6 +115,7 @@
       & > div {
         color: #b0b0b0;
         font-size: 12px;
+        white-space: nowrap;
 
         &.col-discount {
           color: #b0b0b0;

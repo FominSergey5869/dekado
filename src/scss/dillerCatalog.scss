@@ -1,0 +1,12 @@
+@import 'components/avaibility.scss';
+@import 'components/buyButton.scss';
+@import 'components/pagination.scss';
+
+.diller-catalog-head {
+  margin: 0 0 50px 0;
+  &__item {
+    &:first-child {
+      margin: 0 0 12px 0;
+    }
+  }
+}

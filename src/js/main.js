@@ -107,7 +107,7 @@ $(document).ready(function () {
     else input.val(parseInt(val) - 1)
   })
 
-  $('.basket-table__row .del--button').click(function () {
-    $(this).closest('.basket-table__row').remove()
+  $('.custom-table__row .del--button').click(function () {
+    $(this).closest('.custom-table__row').remove()
   })
 })
