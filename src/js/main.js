@@ -110,4 +110,56 @@ $(document).ready(function () {
   $('.custom-table__row .del--button').click(function () {
     $(this).closest('.custom-table__row').remove()
   })
+
+  //История заказов
+  $('.js-history-table--open-button').click(function (params) {
+    const parent = $(this).closest('.history-table__row')
+    const body = parent.find('.history-table__row__body')
+
+    if (parent.hasClass('active')) {
+      body.animate({ height: 0 }, 400, function () {
+        parent.removeClass('active')
+        // body.css({padding: 0})
+      })
+    } else {
+      const height = body[0].scrollHeight + 40
+
+      body.animate({ height: height }, 400)
+      // body.css({padding: 20})
+      parent.addClass('active')
+    }
+  })
+  $('.js-history-table--open-button').eq(0).trigger('click')
+
+  //мобильное меню
+  $('.js-hamburger-menu').click(function () {
+    $('#mobile-menu').addClass('active')
+    $('body').css({overflow: 'hidden'})
+  })
+
+  $('#js-menu-mobile--close').click(function () {
+    $('#mobile-menu').removeClass('active')
+    $('body').css({overflow: 'auto'})
+  })
+
+  $('.header--mobile__menu--bg').click(function () {
+    $('#mobile-menu').removeClass('active')
+    $('body').css({overflow: 'auto'})
+  })
+
+  // collapsible в моб меню
+  $('.js-menu-collapsible-trigger').click(function () {
+
+    const item = $($(this).attr('href'))
+
+    if($(this).hasClass('active')) {
+      $(this).removeClass('active')
+      item.removeClass('active')
+      item.animate({ height: 0 }, 600)
+    } else {
+      $(this).addClass('active')
+      item.addClass('active')
+      item.animate({ height: item[0].scrollHeight }, 600)
+    }
+  })
 })

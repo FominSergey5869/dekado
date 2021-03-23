@@ -1,0 +1,192 @@
+@import 'components/iconButton.scss';
+.history-filters {
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__body {
+    padding: 30px;
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 30px);
+      margin: 0 0 15px -15px;
+      &:last-child {
+        margin: 0 0 0 -15px;
+      }
+      &__item {
+        flex: 1 1 205px;
+        margin: 0 15px 15px 15px;
+        &--buttons {
+          display: flex;
+          justify-content: flex-end;
+          @media (max-width: 700px) {
+            justify-content: flex-start;
+          }
+          @media (max-width: 440px) {
+            flex-direction: column;
+            & > button:first-child {
+              margin: 0 0 15px 0;
+            }
+          }
+          & > button:first-child {
+            margin: 0 26px 0 0;
+          }
+        }
+        &--double {
+          display: flex;
+
+          @media (max-width: 440px) {
+            flex-direction: column;
+          }
+          & > div {
+            flex: 1 1 auto;
+          }
+          & > div:first-child {
+            margin: 0 7px 0 0;
+          }
+        }
+        & > span {
+          display: block;
+          color: #b0b0b0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.history-table-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  @media (max-width: 1170px) {
+    width: calc(100% + 30px);
+    margin: 0 0 0 -15px;
+    & > div {
+      position: relative;
+      margin: 50px 0 0 15px;
+    }
+    & > div::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.history-table {
+  margin: 50px 0 0 0;
+  min-width: 1140px;
+  &__row {
+    &__head {
+      position: relative;
+      display: flex;
+      .active &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        width: 100%;
+        height: 3px;
+        background-color: $orange;
+        z-index: 1;
+      }
+      &__col {
+        &--open {
+          flex: 0 0 68px;
+          display: flex;
+          align-items: center;
+          & > button {
+            background: none;
+            background-color: none;
+            border: none;
+            border-radius: 5px 5px 0 0;
+            width: 50px;
+            height: 50px;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0L0 1L5 6L6 5L1 0Z' fill='black'/%3E%3Cpath d='M10 1L9 0L4 5L5 6L10 1Z' fill='black'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            outline: none;
+
+            .active & {
+              background-color: $orange;
+              background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6L0 5L5 0L6 1L1 6Z' fill='white'/%3E%3Cpath d='M10 5L9 6L4 1L5 0L10 5Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+          }
+        }
+        &--code {
+          flex: 0 0 128px;
+          display: flex;
+          align-items: center;
+        }
+        &--cost {
+          flex: 0 0 195px;
+          display: flex;
+          align-items: center;
+        }
+        &--status {
+          flex: 0 0 185px;
+          display: flex;
+          align-items: center;
+        }
+        &--paid {
+          flex: 0 0 105px;
+          display: flex;
+          align-items: center;
+        }
+        &--canceled {
+          flex: 0 0 98px;
+          display: flex;
+          align-items: center;
+        }
+        &--actions {
+          flex: 1 1 360px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    &__body {
+      position: relative;
+      display: flex;
+      height: 0;
+      overflow: hidden;
+      background: #f5f6f8;
+
+      &__composition {
+        padding: 20px;
+        & > div {
+          display: flex;
+          padding: 5px 0;
+          font-size: 14px;
+          color: black;
+          & > p:first-child {
+            padding: 0 15px 0 0;
+            flex: 0 0 760px;
+          }
+          & > p:last-child {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

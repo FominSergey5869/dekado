@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    @@include('_header.html')
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container">
+        <ul class="breadcrumbs__container__ul">
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">Дилерам </a>
+          </li>
+          <li class="breadcrumbs__container__ul__li">
+            <a href="#">История заказов </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="page-container">
+        <h1>История заказов</h1>
+        <div class="history-filters">
+          <div class="history-filters__head">Фильтр</div>
+          <div class="history-filters__body">
+            <div class="history-filters__body__row">
+              <div class="history-filters__body__row__item">
+                <div class="custom-input wide">
+                  <span class="custom-input__label">Код заказа</span>
+                  <input type="text" name="ordercode" />
+                </div>
+              </div>
+
+              <div
+                class="history-filters__body__row__item history-filters__body__row__item--double"
+              >
+                <div class="custom-input wide">
+                  <span class="custom-input__label">Дата заказа</span>
+                  <input type="date" name="orderdate" />
+                </div>
+                <div class="custom-input wide">
+                  <span class="custom-input__label"></span>
+                  <input type="date" name="orderdate" />
+                </div>
+              </div>
+
+              <div class="history-filters__body__row__item">
+                <div class="custom-select">
+                  <span class="custom-select__label">Статус оплаты</span>
+                  <select class="wide" name="paymentstatus">
+                    <option value="pay">Оплачен</option>
+                    <option value="notpay">Не оплачен</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="history-filters__body__row__item">
+                <span>Статус отмены</span>
+              </div>
+            </div>
+
+            <div class="history-filters__body__row">
+              <div class="history-filters__body__row__item">
+                <label class="custom-checkbox">
+                  <input name="showme" type="checkbox" checked="checked" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  Показывать имя
+                </label>
+              </div>
+              <div
+                class="history-filters__body__row__item history-filters__body__row__item--buttons"
+              >
+                <button class="custom-button" type="submit">Сохранить</button>
+                <button class="custom-button second" type="submit">
+                  Сбросить
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="history-table-container">
+          <div class="history-table">
+            <div class="history-table__row">
+              <div class="history-table__row__head">
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--open"
+                >
+                  <button class="js-history-table--open-button"></button>
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--code"
+                >
+                  3072
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--cost"
+                >
+                  6 181,00 руб.
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--status"
+                >
+                  Ожидание оплаты
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--paid"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--canceled"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--actions"
+                >
+                  <button class="icon-button icon-button--more">
+                    Подробно
+                  </button>
+                  <button class="icon-button icon-button--repeat">
+                    Повторить
+                  </button>
+                  <button class="icon-button icon-button--cancel">
+                    Отменить
+                  </button>
+                </div>
+              </div>
+              <div class="history-table__row__body">
+                <div class="history-table__row__body__composition">
+                  <div>
+                    <p>Круг отрезной 150х1,4х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 150х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 180х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 230х2х22А36 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П800, 800Вт, 1100 об/мин, SDS+,4000
+                      уд./мин.*3Дж,бетон-26 мм,3реж.набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П850В, 850Вт,850 об/мин, SDS+,850
+                      об/мин,4000уд/мин,26 мм.,*3Дж, доп.патр.
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П855В, 850Вт, 800 об/мин,
+                      SDS+,3600уд./мин.*3Дж, бетон-26мм,3реж., набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 1010 DEKADO, 1010Вт, 12 000 об/мин, ф диска
+                      125*22мм,доп.рукоятка, ключ
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 2200 DEKADO 2200Вт, 6000 об/мин, ф диск
+                      230*22мм,плавный пуск,доп.рукоятка,ключ
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18А , 2х Li-Ion 18В, 1,3А/ч,0-550
+                      об/мин, св-0,8-10 мм, кейс, набор , подсв
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18Н, 2 ак.Ni-cd 18В,
+                      1,5А/ч,0-350/0-1300 об/мин,БЗП 0,8-10 мм, кейс,зар.уст.
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Электрорубанок DEKADO Р750, 750Вт, 17000 об/мин, ширина/
+                      глубина- 82/3 мм
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="history-table__row">
+              <div class="history-table__row__head">
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--open"
+                >
+                  <button class="js-history-table--open-button"></button>
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--code"
+                >
+                  3072
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--cost"
+                >
+                  6 181,00 руб.
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--status"
+                >
+                  Ожидание оплаты
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--paid"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--canceled"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--actions"
+                >
+                  <button class="icon-button icon-button--more">
+                    Подробно
+                  </button>
+                  <button class="icon-button icon-button--repeat">
+                    Повторить
+                  </button>
+                  <button class="icon-button icon-button--cancel">
+                    Отменить
+                  </button>
+                </div>
+              </div>
+              <div class="history-table__row__body">
+                <div class="history-table__row__body__composition">
+                  <div>
+                    <p>Круг отрезной 150х1,4х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 150х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 180х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 230х2х22А36 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П800, 800Вт, 1100 об/мин, SDS+,4000
+                      уд./мин.*3Дж,бетон-26 мм,3реж.набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П850В, 850Вт,850 об/мин, SDS+,850
+                      об/мин,4000уд/мин,26 мм.,*3Дж, доп.патр.
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П855В, 850Вт, 800 об/мин,
+                      SDS+,3600уд./мин.*3Дж, бетон-26мм,3реж., набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 1010 DEKADO, 1010Вт, 12 000 об/мин, ф диска
+                      125*22мм,доп.рукоятка, ключ
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 2200 DEKADO 2200Вт, 6000 об/мин, ф диск
+                      230*22мм,плавный пуск,доп.рукоятка,ключ
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18А , 2х Li-Ion 18В, 1,3А/ч,0-550
+                      об/мин, св-0,8-10 мм, кейс, набор , подсв
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18Н, 2 ак.Ni-cd 18В,
+                      1,5А/ч,0-350/0-1300 об/мин,БЗП 0,8-10 мм, кейс,зар.уст.
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Электрорубанок DEKADO Р750, 750Вт, 17000 об/мин, ширина/
+                      глубина- 82/3 мм
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="history-table__row">
+              <div class="history-table__row__head">
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--open"
+                >
+                  <button class="js-history-table--open-button"></button>
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--code"
+                >
+                  3072
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--cost"
+                >
+                  6 181,00 руб.
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--status"
+                >
+                  Ожидание оплаты
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--paid"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--canceled"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--actions"
+                >
+                  <button class="icon-button icon-button--more">
+                    Подробно
+                  </button>
+                  <button class="icon-button icon-button--repeat">
+                    Повторить
+                  </button>
+                  <button class="icon-button icon-button--cancel">
+                    Отменить
+                  </button>
+                </div>
+              </div>
+              <div class="history-table__row__body">
+                <div class="history-table__row__body__composition">
+                  <div>
+                    <p>Круг отрезной 150х1,4х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 150х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 180х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 230х2х22А36 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П800, 800Вт, 1100 об/мин, SDS+,4000
+                      уд./мин.*3Дж,бетон-26 мм,3реж.набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П850В, 850Вт,850 об/мин, SDS+,850
+                      об/мин,4000уд/мин,26 мм.,*3Дж, доп.патр.
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П855В, 850Вт, 800 об/мин,
+                      SDS+,3600уд./мин.*3Дж, бетон-26мм,3реж., набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 1010 DEKADO, 1010Вт, 12 000 об/мин, ф диска
+                      125*22мм,доп.рукоятка, ключ
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 2200 DEKADO 2200Вт, 6000 об/мин, ф диск
+                      230*22мм,плавный пуск,доп.рукоятка,ключ
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18А , 2х Li-Ion 18В, 1,3А/ч,0-550
+                      об/мин, св-0,8-10 мм, кейс, набор , подсв
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18Н, 2 ак.Ni-cd 18В,
+                      1,5А/ч,0-350/0-1300 об/мин,БЗП 0,8-10 мм, кейс,зар.уст.
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Электрорубанок DEKADO Р750, 750Вт, 17000 об/мин, ширина/
+                      глубина- 82/3 мм
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="history-table__row">
+              <div class="history-table__row__head">
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--open"
+                >
+                  <button class="js-history-table--open-button"></button>
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--code"
+                >
+                  3072
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--cost"
+                >
+                  6 181,00 руб.
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--status"
+                >
+                  Ожидание оплаты
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--paid"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--canceled"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--actions"
+                >
+                  <button class="icon-button icon-button--more">
+                    Подробно
+                  </button>
+                  <button class="icon-button icon-button--repeat">
+                    Повторить
+                  </button>
+                  <button class="icon-button icon-button--cancel">
+                    Отменить
+                  </button>
+                </div>
+              </div>
+              <div class="history-table__row__body">
+                <div class="history-table__row__body__composition">
+                  <div>
+                    <p>Круг отрезной 150х1,4х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 150х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 180х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 230х2х22А36 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П800, 800Вт, 1100 об/мин, SDS+,4000
+                      уд./мин.*3Дж,бетон-26 мм,3реж.набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П850В, 850Вт,850 об/мин, SDS+,850
+                      об/мин,4000уд/мин,26 мм.,*3Дж, доп.патр.
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П855В, 850Вт, 800 об/мин,
+                      SDS+,3600уд./мин.*3Дж, бетон-26мм,3реж., набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 1010 DEKADO, 1010Вт, 12 000 об/мин, ф диска
+                      125*22мм,доп.рукоятка, ключ
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 2200 DEKADO 2200Вт, 6000 об/мин, ф диск
+                      230*22мм,плавный пуск,доп.рукоятка,ключ
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18А , 2х Li-Ion 18В, 1,3А/ч,0-550
+                      об/мин, св-0,8-10 мм, кейс, набор , подсв
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18Н, 2 ак.Ni-cd 18В,
+                      1,5А/ч,0-350/0-1300 об/мин,БЗП 0,8-10 мм, кейс,зар.уст.
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Электрорубанок DEKADO Р750, 750Вт, 17000 об/мин, ширина/
+                      глубина- 82/3 мм
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="history-table__row">
+              <div class="history-table__row__head">
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--open"
+                >
+                  <button class="js-history-table--open-button"></button>
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--code"
+                >
+                  3072
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--cost"
+                >
+                  6 181,00 руб.
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--status"
+                >
+                  Ожидание оплаты
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--paid"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--canceled"
+                >
+                  нет
+                </div>
+                <div
+                  class="history-table__row__head__col history-table__row__head__col--actions"
+                >
+                  <button class="icon-button icon-button--more">
+                    Подробно
+                  </button>
+                  <button class="icon-button icon-button--repeat">
+                    Повторить
+                  </button>
+                  <button class="icon-button icon-button--cancel">
+                    Отменить
+                  </button>
+                </div>
+              </div>
+              <div class="history-table__row__body">
+                <div class="history-table__row__body__composition">
+                  <div>
+                    <p>Круг отрезной 150х1,4х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 150х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 180х1,6х22А40 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>Круг отрезной 230х2х22А36 мет+нерж</p>
+                    <p>50 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П800, 800Вт, 1100 об/мин, SDS+,4000
+                      уд./мин.*3Дж,бетон-26 мм,3реж.набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П850В, 850Вт,850 об/мин, SDS+,850
+                      об/мин,4000уд/мин,26 мм.,*3Дж, доп.патр.
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Перфоратор уд. DEKADO П855В, 850Вт, 800 об/мин,
+                      SDS+,3600уд./мин.*3Дж, бетон-26мм,3реж., набор
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 1010 DEKADO, 1010Вт, 12 000 об/мин, ф диска
+                      125*22мм,доп.рукоятка, ключ
+                    </p>
+                    <p>1 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      УШМ 2200 DEKADO 2200Вт, 6000 об/мин, ф диск
+                      230*22мм,плавный пуск,доп.рукоятка,ключ
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18А , 2х Li-Ion 18В, 1,3А/ч,0-550
+                      об/мин, св-0,8-10 мм, кейс, набор , подсв
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Шуруповерт акк. DEKADO Ш18Н, 2 ак.Ni-cd 18В,
+                      1,5А/ч,0-350/0-1300 об/мин,БЗП 0,8-10 мм, кейс,зар.уст.
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                  <div>
+                    <p>
+                      Электрорубанок DEKADO Р750, 750Вт, 17000 об/мин, ширина/
+                      глубина- 82/3 мм
+                    </p>
+                    <p>2 шт.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('_footer.html')
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
