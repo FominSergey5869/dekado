@@ -371,172 +371,409 @@
     </div>
     <div class="wrapper">
       <div class="page-container">
-        <h1>Сравнение товаров</h1>
-
-        <div class="compare">
-          <div class="compare__left">
-            <div class="compare__left__head"> 
-              <label class="custom-checkbox">
-                <input name="onlydesc" type="checkbox" checked="checked" />
-                <span class="custom-checkbox__checkmark"></span>
-                Показать только различия
-              </label>
-            </div>
-            <div class="compare__left__specifications">
-              <div class="compare__left__specifications__item">
-                Мощность, кВт
+        <h1>2019 год - 18 месяцев</h1>
+        <div class="project-container">
+          <div class="project-container__left">
+            <h4>Регистрация в проекте "18 месяцев гарантии"</h4>
+            <form>
+              <div class="custom-input wide">
+                <span class="custom-input__label">Имя и фамилия продавца</span>
+                <input type="text" name="sellername" />
               </div>
-              <div class="compare__left__specifications__item">
-                Рабочее / Максимальное давление, бар
+              <div class="custom-input wide">
+                <span class="custom-input__label"
+                  >Наименование инструмента*</span
+                >
+                <input type="text" name="toolname" />
               </div>
-              <div class="compare__left__specifications__item">
-                Рабочий расход жидкости, л/ мин
+              <div class="custom-input wide">
+                <span class="custom-input__label"
+                  >Серийный номер инструмента*</span
+                >
+                <input type="text" name="toolnumber" />
               </div>
-              <div class="compare__left__specifications__item">
-                Допускаемое макс. давление поступающей воды, бар
+              <div class="custom-input wide">
+                <span class="custom-input__label">Ваше имя*</span>
+                <input type="text" name="name" />
               </div>
-              <div class="compare__left__specifications__item">
-                Мощность электродвигателя, кВт
+              <div class="custom-input wide">
+                <span class="custom-input__label">Ваш телефон*</span>
+                <input type="text" name="phone" />
               </div>
-              <div class="compare__left__specifications__item">
-                Напряжение источника электропитания, В
+              <div class="custom-input wide">
+                <span class="custom-input__label">Ваш e-mail*</span>
+                <input type="email" name="email" />
               </div>
-              <div class="compare__left__specifications__item">
-                Максимальная температура поступающей горячей воды, ºС
+              <div class="custom-input wide">
+                <span class="custom-input__label"
+                  >Адрес торговой точки приобретения инструмента</span
+                >
+                <input type="text" name="address" />
               </div>
-              <div class="compare__left__specifications__item">
-                Длина шланга, м
+              <p>* – обязательно для заполнения</p>
+              <div>
+                <label class="custom-checkbox">
+                  <input name="agreement" type="checkbox" checked="checked" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  согласие на обработку персональных данных и рассылку
+                  оповещений
+                </label>
               </div>
-            </div>
+              <div>
+                <button class="custom-button wide" type="submit">
+                  Зарегистрироваться
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="compare-scroller">
-            <div class="compare-scroller__container">
-              <div class="compare-scroller__container__item">
-                <div class="compare-scroller__container__item__img">
-                  <img src="img/product.jpg" />
-                  <button
-                    class="compare-scroller__container__item__img__del"
-                  ></button>
+          <div class="project-container__right">
+            <p>
+              Условия участия в проекте: Участником проекта может стать любой
+              покупатель, совершивший покупку инструмента DEKADO в сети
+              магазинов и ТЦ «СтройлоН» с 01.01.2019 по 30.06.2019,
+              расположенных по адресам:
+            </p>
+
+            <div class="project-container__right__table">
+              <div class="project-table">
+                <div class="project-table__row project-table__row--head">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    Адрес
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    Телефон
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    Время работы
+                  </div>
                 </div>
-                <div class="compare-scroller__container__item__specifications">
-                  <div>1,5</div>
-                  <div>80/130</div>
-                  <div>6,0</div>
-                  <div>4</div>
-                  <div>1,5</div>
-                  <div>220</div>
-                  <div>40</div>
-                  <div>6</div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Брянск, Бежицкий р-н, ул. Бурова, 12А 1 этаж
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 31-77-77
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    ежедневно с 9:00 до 20:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Брянск, Бежицкий р-н, ул. Бурова, 12А 3 этаж
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 31-77-77
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    ежедневно с 9:00 до 20:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Брянск, Бежицкий р-н, ул. 22 съезда КПСС, 19
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 52-77-34
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота с 9:00 до 18:00, воскресенье с 9:00
+                    до 17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Брянск, Бежицкий р-н, ул. Шоссейная
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    8 (4832) 78-29-53
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота: 9:00-18:00, воскресенье с 9:00 до
+                    17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Брянск, Володарский р-н, б-р Щорса, 2б
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 30-61-40
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота с 9:00 до 18:00, воскресенье с 9:00
+                    до 17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Брянск, Советский р-н, ул. Красноармейская, 103
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 66-52-62
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота с 9:00 до 18:00, воскресенье с 9:00
+                    до 17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Брянск, пр-т Московский,1ж 1 этаж
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 31-77-77
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    ежедневно с 9:00 до 20:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Брянск, пр-т Московский,1ж 3 этаж
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 31-77-77
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    ежедневно с 9:00 до 20:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    пгт. Белые берега, ул. 2- я Брянская, д. 6/2
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 40-00-41
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота с 9:00 до 18:00, воскресенье с 9:00
+                    до 17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Карачев, ул. 50-лет Октября, 65
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (48335) 2-14-70
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота с 9:00 до 18:00, воскресенье с 9:00
+                    до 17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Клинцы, ул. Парковая, 13а
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (48336) 4-22-10
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота с 9:00 до 18:00, воскресенье с 9:00
+                    до 17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Людиново, ул. Козлова,18
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (48444) 5-29-96
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота с 9:00 до 18:00, воскресенье с 9:00
+                    до 17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Рославль, ул. Советская, д. 57
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (48134) 2-60-13
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 18:00, суббота, воскресенье с 9:00 до 16:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г.Трубчевск, ул. Урицкого, 14
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (48352) 42-02-33
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    с 9:00 до 19:00, суббота с 9:00 до 18:00, воскресенье с 9:00
+                    до 17:00
+                  </div>
+                </div>
+                <div class="project-table__row">
+                  <div
+                    class="project-table__row__item project-table__row__item--address"
+                  >
+                    г. Сельцо, ул Мейпариани 28а
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--phone"
+                  >
+                    (4832) 40-40-97
+                  </div>
+                  <div
+                    class="project-table__row__item project-table__row__item--time"
+                  >
+                    ежедневно с 9:00 до 19:30
+                  </div>
                 </div>
               </div>
-              <div class="compare-scroller__container__item">
-                <div class="compare-scroller__container__item__img">
-                  <img src="img/product.jpg" />
-                  <button
-                    class="compare-scroller__container__item__img__del"
-                  ></button>
-                </div>
-                <div class="compare-scroller__container__item__specifications">
-                  <div>1,5</div>
-                  <div>80/130</div>
-                  <div>6,0</div>
-                  <div>4</div>
-                  <div>1,5</div>
-                  <div>220</div>
-                  <div>40</div>
-                  <div>6</div>
-                </div>
-              </div>
-              <div class="compare-scroller__container__item">
-                <div class="compare-scroller__container__item__img">
-                  <img src="img/product.jpg" />
-                  <button
-                    class="compare-scroller__container__item__img__del"
-                  ></button>
-                </div>
-                <div class="compare-scroller__container__item__specifications">
-                  <div>1,5</div>
-                  <div>80/130</div>
-                  <div>6,0</div>
-                  <div>4</div>
-                  <div>1,5</div>
-                  <div>220</div>
-                  <div>40</div>
-                  <div>6</div>
-                </div>
-              </div>
-              <div class="compare-scroller__container__item">
-                <div class="compare-scroller__container__item__img">
-                  <img src="img/product.jpg" />
-                  <button
-                    class="compare-scroller__container__item__img__del"
-                  ></button>
-                </div>
-                <div class="compare-scroller__container__item__specifications">
-                  <div>1,5</div>
-                  <div>80/130</div>
-                  <div>6,0</div>
-                  <div>4</div>
-                  <div>1,5</div>
-                  <div>220</div>
-                  <div>40</div>
-                  <div>6</div>
-                </div>
-              </div>
-              <div class="compare-scroller__container__item">
-                <div class="compare-scroller__container__item__img">
-                  <img src="img/product.jpg" />
-                  <button
-                    class="compare-scroller__container__item__img__del"
-                  ></button>
-                </div>
-                <div class="compare-scroller__container__item__specifications">
-                  <div>1,5</div>
-                  <div>80/130</div>
-                  <div>6,0</div>
-                  <div>4</div>
-                  <div>1,5</div>
-                  <div>220</div>
-                  <div>40</div>
-                  <div>6</div>
-                </div>
-              </div>
-              <div class="compare-scroller__container__item">
-                <div class="compare-scroller__container__item__img">
-                  <img src="img/product.jpg" />
-                  <button
-                    class="compare-scroller__container__item__img__del"
-                  ></button>
-                </div>
-                <div class="compare-scroller__container__item__specifications">
-                  <div>1,5</div>
-                  <div>80/130</div>
-                  <div>6,0</div>
-                  <div>4</div>
-                  <div>1,5</div>
-                  <div>220</div>
-                  <div>40</div>
-                  <div>6</div>
-                </div>
-              </div>
-              <div class="compare-scroller__container__item">
-                <div class="compare-scroller__container__item__img">
-                  <img src="img/product.jpg" />
-                  <button
-                    class="compare-scroller__container__item__img__del"
-                  ></button>
-                </div>
-                <div class="compare-scroller__container__item__specifications">
-                  <div>1,5</div>
-                  <div>80/130</div>
-                  <div>6,0</div>
-                  <div>4</div>
-                  <div>1,5</div>
-                  <div>220</div>
-                  <div>40</div>
-                  <div>6</div>
-                </div>
-              </div>
+            </div>
+
+            <p>
+              В проекте принимает участие ВЕСЬ ассортимент моторизированного
+              инструмента DEKADO.
+            </p>
+            <br />
+            <p>Механика проведения проекта:</p>
+            <br />
+            <p>
+              Покупатель совершает покупку данного инструмента DEKADO. Получает
+              сертификат на увеличение гарантийного срока на 6 месяцев.
+              ОБЯЗАТЕЛЬНО регистрирует серийный номер агрегата на сайте
+              www.dekado.ru самостоятельно или с помощью продавцов. В течении 12
+              месяца со дня покупки (т.е. в последний месяц основного
+              гарантийного срока) покупатель приносит инструмент на профилактику
+              в авторизованный сервисный центр ПрофСервис32, расположенный по
+              адресу ул. Бурова, д.14 и только после проведения регулировки и
+              смазки гарантия продляется еще на 6 месяцев. Услуга Сервисного
+              центра осуществляется бесплатно.
+            </p>
+            <br />
+            <p>Авторизованный сервисный центр:</p>
+            <br />
+            <p>Проф-сервис 32</p>
+            <br />
+            <p>г. Брянск, ул. Бурова 14</p>
+            <br />
+            <p>+7(4832) 31-01-33</p>
+            <br />
+            <p>
+              Количество товара, принимающего участие в проекте, ограничено.
+            </p>
+            <br />
+            <p>
+              Участие в проекте подразумевает ознакомление и полное согласие
+              участников с настоящими условиями проекта.
+            </p>
+
+            <div class="project-container__right__desc">
+              <p>
+                Количество товара, принимающего участие в проекте, ограничено.
+              </p>
+              <p>
+                Участие в проекте подразумевает ознакомление и полное согласие
+                участников с настоящими условиями проекта.
+              </p>
+            </div>
+
+            <div class="project-container__right__map">
+              <script
+                type="text/javascript"
+                charset="utf-8"
+                async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2bf19cebd8ed22e2c59317dd2644b78c071cbf1ba81b7d53b4f4392a4c98bc75&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
+              ></script>
             </div>
           </div>
         </div>

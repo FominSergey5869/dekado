@@ -161,6 +161,11 @@
           align-items: center;
           justify-content: space-between;
         }
+        & > label {
+          font-size: 12px;
+          line-height: 18px;
+          color: #b0b0b0;
+        }
       }
     }
 
@@ -188,5 +193,45 @@
         }
       }
     }
+  }
+}
+
+.sort-button {
+  position: relative;
+  font-size: 12px;
+  line-height: 18px;
+  color: #b0b0b0;
+  border: none;
+  background: none;
+  padding: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% + 1px);
+    right: -13px;
+    width: 7px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='5' viewBox='0 0 7 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.65939 0.391792C3.06608 -0.130597 3.93392 -0.130597 4.34061 0.391792L6.8162 3.57164C7.28608 4.17521 6.80068 5 5.97558 5H1.02442C0.199322 5 -0.286083 4.17521 0.183804 3.57164L2.65939 0.391792Z' fill='%23B0B0B0'/%3E%3C/svg%3E%0A");
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% + 1px);
+    right: -23px;
+    width: 7px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='5' viewBox='0 0 7 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.65939 4.60821C3.06608 5.1306 3.93392 5.1306 4.34061 4.60821L6.8162 1.42836C7.28608 0.824794 6.80068 0 5.97558 0H1.02442C0.199322 0 -0.286083 0.824794 0.183804 1.42836L2.65939 4.60821Z' fill='%23B0B0B0'/%3E%3C/svg%3E%0A");
+    transform: translateY(-50%);
+  }
+
+  &.up::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='5' viewBox='0 0 7 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.34061 0.391792C3.93392 -0.130597 3.06608 -0.130597 2.65939 0.391792L0.183803 3.57164C-0.286083 4.17521 0.199323 5 1.02442 5L5.97558 5C6.80068 5 7.28608 4.17521 6.8162 3.57164L4.34061 0.391792Z' fill='%23EE7601'/%3E%3C/svg%3E%0A");
+  }
+
+  &.down::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='5' viewBox='0 0 7 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.65939 4.60821C3.06608 5.1306 3.93392 5.1306 4.34061 4.60821L6.8162 1.42836C7.28608 0.824794 6.80068 0 5.97558 0H1.02442C0.199322 0 -0.286083 0.824794 0.183804 1.42836L2.65939 4.60821Z' fill='%23EE7601'/%3E%3C/svg%3E%0A");
   }
 }

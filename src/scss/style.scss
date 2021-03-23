@@ -17,6 +17,7 @@ $grey: #b0b0b0;
 @import 'fonts';
 @import 'libs/slick.scss';
 @import 'libs/nice-select.scss';
+@import 'libs/mCustomScrollbar.scss';
 
 *,
 *::before,
@@ -273,6 +274,7 @@ h4 {
 @import 'catalog';
 @import 'catalogSecondLevel';
 @import 'product';
+@import 'compare';
 @import 'news';
 @import 'newsPage';
 @import 'helpfullInformation';
@@ -289,3 +291,4 @@ h4 {
 @import 'dillerCatalog';
 @import 'ordersHistory';
 @import 'order';
+@import 'project18';

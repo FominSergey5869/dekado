@@ -25,6 +25,13 @@ $(document).ready(function () {
     focusOnSelect: true,
     centerPadding: 0,
   })
+  //scroll в сравнении 
+  $(".compare-scroller").mCustomScrollbar({
+    axis:"x",
+    advanced:{
+      autoExpandHorizontalScroll:true
+    }
+  });
 
   //select кастомный
   $('select').niceSelect()
